@@ -1,31 +1,50 @@
-# class
+# # class
 
-class Person:    
-    # class attributes
-    address = 'no information'
-    # constructor 
-    def __init__(self, name, year):
+# class Person:    
+#     # class attributes
+#     address = 'no information'
+#     # constructor 
+#     def __init__(self, name, year):
         
-        # object atributes
-        self.name = name
-        self.year = year
-        print('init method worked')
+#         # object atributes
+#         self.name = name
+#         self.year = year        
 
-        # methods
+#     # instance methods
+#     def intro(self):
+#         print('Hello There. I am ' + self.name)
+
+#     # instance methods
+#     def calculateAge(self):
+#         return 2019 - self.year    
 
 
-# object (instance)
-p1 = Person(name ='ali',year = 1990)
-p2 = Person(name ='Sam',year = 2000)
-# updating
-p1.name = 'Samuel'
-p1.address = 'New York'
-# accession object attributes
-print(f'p1 name: {p1.name} year: {p1.year} address: {p1.address}')
-print(f'p2 name: {p2.name} year: {p2.year} address: {p2.address}')
+# # object (instance)
+# p1 = Person(name ='ali',year = 1990)
+# p2 = Person(name ='Sam',year = 2000)
 
-print(p1)
-print(p2)
-print(type(p1))
-print(type(p2))
-print(p1 == p2)
+# p1.intro()
+# p2.intro()
+
+# print(f'my name is : {p1.name} and my age is : {p1.calculateAge()}')
+# print(f'my name is : {p2.name} and my age is : {p2.calculateAge()}')
+
+class Circle:
+    # Class object attribute
+    pi = 3.14
+
+    def __init__(self, radius = 1):
+        self.radius = radius
+
+    # Methods
+    def calculatePerimeter(self):
+        return 2 * self.pi * self.radius    
+
+    def calculateArea(self):
+        return self.pi * (self.radius ** 2)
+
+c1 = Circle() # radius = 1
+c2 = Circle(5)
+
+print(f'c1 : area = {c1.calculateArea()} perimeter = {c1.calculatePerimeter()}')
+print(f'c2 : area = {c2.calculateArea()} perimeter = {c2.calculatePerimeter()}')
